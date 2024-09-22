@@ -49,15 +49,18 @@ class ProfileCard extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Image.asset(
-            "assets/images/profile_pic.png",
-            height: 38,
+          Material(
+            borderRadius: BorderRadius.circular(50),
+            clipBehavior: Clip.hardEdge,
+            child: Image.asset(
+              "assets/images/Tanbir.jpg",
+              height: 38,
+            ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: defaultPadding / 2),
-            child: Text("Angelina Jolie"),
+            child: Text("Tanbir Hossain"),
           ),
-          Icon(Icons.keyboard_arrow_down),
         ],
       ),
     );

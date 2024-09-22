@@ -1,4 +1,3 @@
-import 'dart:convert';
 
 import '../../models/api_response.dart';
 import '../../models/coupon.dart';
