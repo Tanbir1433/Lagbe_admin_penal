@@ -2,7 +2,6 @@ import '../../brands/brand_screen.dart';
 import '../../category/category_screen.dart';
 import '../../coupon_code/coupon_code_screen.dart';
 import '../../dashboard/dashboard_screen.dart';
-import '../../notification/notification_screen.dart';
 import '../../order/order_screen.dart';
 import '../../posters/poster_screen.dart';
 import '../../variants/variants_screen.dart';
@@ -15,13 +14,11 @@ import '../../sub_category/sub_category_screen.dart';
 class MainScreenProvider extends ChangeNotifier{
   Widget selectedScreen = DashboardScreen();
 
-
-
   navigateToScreen(String screenName) {
     switch (screenName) {
       case 'Dashboard':
         selectedScreen = DashboardScreen();
-        break; // Break statement needed here
+        break;
       case 'Category':
         selectedScreen = CategoryScreen();
         break;
@@ -45,9 +42,6 @@ class MainScreenProvider extends ChangeNotifier{
         break;
       case 'Order':
         selectedScreen = OrderScreen();
-        break;
-      case 'Notifications':
-        selectedScreen = NotificationScreen();
         break;
       default:
         selectedScreen = DashboardScreen();

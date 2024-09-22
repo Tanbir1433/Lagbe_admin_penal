@@ -2,7 +2,6 @@ import '../../../utility/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-
 class SideMenu extends StatelessWidget {
   const SideMenu({
     Key? key,
@@ -14,7 +13,18 @@ class SideMenu extends StatelessWidget {
       child: ListView(
         children: [
           DrawerHeader(
-            child: Image.asset("assets/images/logo.png"),
+            child: Container(
+
+              margin: EdgeInsets.all(28),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                  image: AssetImage('assets/images/a.png'),
+                  fit: BoxFit.contain,
+                ),
+              ),
+            ),
           ),
           DrawerListTile(
             title: "Dashboard",
@@ -79,13 +89,6 @@ class SideMenu extends StatelessWidget {
               context.mainScreenProvider.navigateToScreen('Poster');
             },
           ),
-          DrawerListTile(
-            title: "Notifications",
-            svgSrc: "assets/icons/menu_notification.svg",
-            press: () {
-              context.mainScreenProvider.navigateToScreen('Notifications');
-            },
-          ),
         ],
       ),
     );
@@ -95,7 +98,6 @@ class SideMenu extends StatelessWidget {
 class DrawerListTile extends StatelessWidget {
   const DrawerListTile({
     Key? key,
-    // For selecting those three line once press "Command+D"
     required this.title,
     required this.svgSrc,
     required this.press,
