@@ -10,7 +10,6 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     context.dataProvider;
     return Scaffold(
-
       body: SafeArea(
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
